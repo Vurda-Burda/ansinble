@@ -1,0 +1,17 @@
+
+- name: Installation geerlingguy.mysql geerlingguy.php geerlingguy.mgnix
+  hosts: [server1, server2]
+  vars_files:
+    - vars/root_user.yml
+    - vars/server1_pass.yml
+  become: true
+  become_user: '{{ user }}'
+  roles:
+    - geerlingguy.nginx
+    - geerlingguy.mysql
+    - geerlingguy.php-versions
+    - geerlingguy.php
+   
+
+
+  

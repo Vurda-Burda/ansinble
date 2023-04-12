@@ -1,0 +1,6 @@
+---
+app_user: "root"
+http_host: "wp.tk"
+http_conf: "wp.tk.conf"
+http_port: "80"
+disable_default: true

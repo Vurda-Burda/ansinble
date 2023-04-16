@@ -1,0 +1,19 @@
+
+- name: Installation wordpress
+  hosts: [server]
+  vars_files:
+    - group_vars/wordpress.yml
+    - group_vars/root_user.yml
+    - group_vars/servers_pass.yml
+  become: true
+  become_user: '{{ user }}'
+  roles:
+    - geerlingguy.nginx 
+    - geerlingguy.php
+    - geerlingguy.mysql
+    - wordpress
+    
+
+
+
+  
